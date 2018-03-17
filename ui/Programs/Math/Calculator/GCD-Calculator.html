@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<HTML>
+<!--
+Made on 30 October 2017, 8:25 PM
+-->
+<head>
+	<title>GCD calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="style.css"></link>
+	<script>
+	var NULL="";
+	var gcd=function(NumOne, NumTwo, STOPinput, BigNum, MiniNum, results, CalcNumOne, CalcNumTwo, BigCheck, CalcNumOneRes, CalcNumTwoRes) {
+		console.log("clicked");
+		results=[];
+		console.log(NumOne+","+NumTwo);
+		console.log(NumOne>NumTwo);
+		BigCheck=NumOne>NumTwo;
+		console.log("BigCheck:");
+		console.log(BigCheck);
+		console.log(NumOne);
+		if(isNaN(NumOne)===true || isNaN(NumTwo)===true || NumOne<0 || NumTwo<0) {
+			console.log("You made a mistake while typing input.");
+			document.getElementById('result').innerHTML= "Try Again";
+			return;
+		}
+
+			if(BigCheck===true)  {
+				BigNum=NumOne;
+				MiniNum=NumTwo;
+			} else if(BigCheck===false) {
+				BigNum=NumTwo;
+				MiniNum=NumOne;
+			} else{
+				console.log("Error. That's weird! Please tell LightninTh5426 about this.");
+				window.alert("Error. That's weird! Please tell LightninTh5426 about this.");
+				document.getElementById('result').innerHTML= "Error. <br>That's weird! Please tell LightninTh5426 about this.";
+
+				return;
+			}
+
+				CalcNumOne=(BigNum-((parseInt(BigNum/MiniNum))*MiniNum));
+				CalcNumTwo=MiniNum;
+
+				results.push("gcd("+BigNum+", "+MiniNum+")");
+				results.push("gcd("+CalcNumOne+", "+CalcNumTwo+")");
+				console.log(results);
+
+				BigCheck=CalcNumOne>CalcNumTwo;
+				console.log("BigCheck:");
+				console.log(BigCheck);
+
+				while(CalcNumOne!==0) {
+
+					if(BigCheck===false) {
+						CalcNumOneRes=CalcNumOne;
+						CalcNumTwoRes=CalcNumTwo;
+
+						CalcNumTwo=CalcNumOneRes;
+						CalcNumOne=(CalcNumTwoRes-((parseInt(CalcNumTwoRes/CalcNumOneRes))*CalcNumOneRes));
+
+						console.log(CalcNumOne);
+						console.log(CalcNumTwo);
+
+						results.push("GCD("+CalcNumOne+", "+CalcNumTwo+")");
+						console.log(results);
+
+					} else {
+						console.log("BigCheck is true. That's weird!? Please report this to LightninTh5426.");
+						window.alert("BigCheck is true. That's weird!? Please report this to LightninTh5426.");
+					}
+			}
+			document.getElementById('result').innerHTML= "GCD(" + NumOne + ", " + NumTwo+ ") = "+CalcNumTwo;
+
+};
+	</script>
+</head>
+<body>
+	<div id = "tag">LightninTh5426 Programs</div>
+	<br><br><BR><br>
+
+		<p> GCD( </p>
+		<input type="number" placeholder="GCD Integer One" id="Num1" class="inputs">
+		<p> , </p>
+		<input placeholder="GCD Integer Two" type="number" id="Num2" class="inputs">
+		<p> ) </p>
+		<br>
+		<button id="submit">Compute</button>
+		<br><br><br>
+		<div id="result"></div>
+
+</body>
+<script type="text/javascript">
+	var submit=document.getElementById("submit");
+	var Box1=document.getElementById("Num1");
+	var Box2=document.getElementById("Num2");
+	submit.onclick= function() {
+		gcd(parseInt(Box1.value), parseInt(Box2.value));
+	}
+</script>

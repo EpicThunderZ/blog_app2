@@ -1,0 +1,333 @@
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('svg');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+div.new_html_code {
+  min-width:150px;
+min-height:100px;
+max-width:100%;
+max-height:100%;
+overflow:auto;
+}
+
+.carousel-inner img {
+  width: auto !important;
+  height: auto !important;
+  object-fit: cover;
+}
+footer {
+  padding: 5%;
+  color: black;
+  text-align: center;
+  font-family: 'Port Lligat Sans';
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+#Contact{
+  width: 100%;
+  height: 100%;
+}
+
+#forgotPwd{
+	color: dodgerblue;
+	cursor: pointer;
+	text-decoration: none;
+}
+#forgotPwd:hover{
+	text-decoration: underline;
+}
+.comment{
+	margin: 5px;
+}
+.commentTime{
+	text-align: right;
+}
+.commenterDetail{
+	text-align: center;
+}
+.comments{
+	background: white;
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+.commenter{
+	background: #0d4e6c;
+	color: white;
+}
+.programHead a{
+    font-family: 'Lato';
+    font-weight: 900;
+    color: black !important;
+}
+.showCom{
+    text-align: right;
+}
+#programs{
+    overflow: auto;
+	height: 500%;
+}
+.commentBoxPar{
+    text-align: center;
+}
+.commentBox{
+
+}
+body{
+    font-family: 'Lato';
+    font-weight: light;
+    overflow-y: auto;
+	background: #E6E6E6;
+}
+.container{
+    overflow: auto;
+}
+/*
+button, input[type=submit]{
+    background-color: white;
+    transition-duration: 0.4s;
+    border-radius: 3px;
+    border:1px;
+    color: #0d4e6c;
+    padding: 10px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    border: 1px #0d4e6c solid;
+    cursor: pointer;
+}
+button:hover, input[type=submit]:hover {
+    background-color: #0d4e6c;
+    color: white;
+}
+*/
+input[type=submit] {
+    height: 35px;
+}
+/*
+button:active, input[type=submit]:active {
+    background-color: black;
+    color: white;
+    border-bottom: 3px black groove;
+}
+*/
+/*
+#username, #password, #email{
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+	font-family: monospace;
+}
+*/
+#username:invalid, #password:invalid, #email:invalid {
+	    padding:5px;
+    border:2px solid red;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+}
+#username:focus:valid, #password:focus:valid, #email:focus:valid {
+	    padding:5px;
+    border:2px solid green;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+}
+.gotProgram{
+    border: 2px gray solid;
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background: lightgray;
+	border-radius: 2px;
+}
+
+.commentDiv{
+    text-align: right !important;
+}
+.ProgramHead{
+    text-align: center !important;
+}
+#titlebar{
+	height: 15%;
+	width: 99.9%;
+	background-color: black;
+	position: fixed;
+	border: 1px solid gray;
+	border-radius: 5px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+}
+#ProfileB{
+  position: absolute;
+  top: 60px;
+  width: 489px;
+  height: 50px;
+  left: 0px;
+}
+#SignUpB{
+  position: absolute;
+  top: 60px;
+  width: 240px;
+  height: 50px;
+  left: -3px;
+}
+#LoginB{
+  position: absolute;
+  top: 60px;
+  width: 240px;
+  height: 50px;
+  left: 245px;
+}
+#SignUpB, #LoginB, #ProfileB{
+  color: blue;
+
+  border: 3px solid black;
+
+}
+#SignUpB:hover, #LoginB:hover, #ProfileB:hover{
+  color: white;
+  background: blue;
+}
+#SignUpB:active, #LoginB:active, #ProfileB:active{
+  color: white;
+  background: black;
+}
+#logo{
+  border-radius: 100px;
+  border: 4px white solid;
+  width: 100px;
+  height: 80px;
+  margin-left: 10px;
+  position: relative;
+  bottom: 10px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+#logo:hover{
+  border-color: gray;
+}
+
+.dropbtn {
+background-color: white;
+color: black;
+padding: 18px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+transition-duration: 0.4s;
+border-bottom: 5px solid white;
+font-family: 'Lato';
+font-weight: bold;
+border-radius: 2px;
+}
+
+.dropdown {
+position: absolute;
+top: 5px;
+display: inline-block;
+margin-left: 20px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown:hover .dropbtn:hover {
+background-color: #f1f1f1;
+border-bottom: 5px solid black;
+    color: black;
+
+}
+.dropdown:active .dropbtn:active{
+background-color: black;
+color: white;
+border-bottom: none;
+}
+#name{
+background-color: black;
+color: white;
+border-bottom: none;
+position: absolute;
+top: -35px;
+right: -5px;
+height: 45px;
+font-size: 2em;
+font-family: 'Lato';
+font-weight: bold;
+border-radius: 5px;
+padding: 10px;
+padding-top: 15px;
+transition-duration: 1s;
+border-bottom: 5px solid white;
+}
+#username{
+font-size: 20px;
+}
+#name:hover{
+background-color: #f1f1f1;
+color:black;
+border-bottom: 5px solid black;
+}
+.Head{
+font-size: 2em;
+font-family: 'Lato';
+font-style: italic;
+font-weight: bold;
+}
+#subcont{
+font-family: 'Lato';
+font-weight: lighter;
+}
+.headli{
+font-size: 1.3em;
+font-family: 'Lato';
+font-weight: bold;
+background-color: white;
+border: 1px white solid;
+width: 100px;
+border-radius: 4px;
+transition-duration: 1s;
+border-bottom: 5px solid black;
+margin-right: 100px;
+padding: 10px;
+}
+.headli:hover{
+background: black;
+color: white;
+}
+.headli:active{
+border: none;
+}
+#content{
+/*text-align: center;*/
+}
+UL{
+list-style-position: inside;
+}
