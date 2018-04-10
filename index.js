@@ -164,125 +164,60 @@ var dir = {
   'Home': {
     heading:'',
     content:`
-<!--
-    <div style="width:1150px; vertical-align:middle; height:700px;" class="bg-info">
-    <center>
-    <br><br><br>
-    <img src="/ui/laptop.jpg" class="rounded-circle"><br>
-    <br><br><br>
-    <p style="font-size: 6rem; color: white;">"Expert coders"</p>
-    <center>
-    </div>
-    -->
-    <div id="demo" class="carousel slide" data-ride="carousel" style="width:1150px; height:700px;">
-
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-      <div class="">
-        <div class="carousel-item active">
-        <div style="width:1150px; vertical-align:middle; height:700px;" class="bg-info">
-        <center>
-        <br><br><br>
-        <img src="/ui/laptop.jpg" class="rounded-circle"><br>
-        <br><br><br>
-        <p style="font-size: 6rem; color: white;">"Expert web coder"</p>
-        <center>
-        </div>
-        </div>
-        <div class="carousel-item">
-        <div style="width:1150px; vertical-align:middle; height:700px;" class="bg-info">
-        <center>
-        <br><br><br>
-        <img src="/ui/piano.jpg" class="rounded-circle"><br>
-        <br><br><br>
-        <p style="font-size: 6rem; color: white;">"Piano lover"</p>
-        <center>
-        </div>
-        </div>
-        <div class="carousel-item">
-          <div style="width:1150px; vertical-align:middle; height:700px;" class="bg-info">
-            <center>
-              <br><br>
-              <img src="/ui/github.jpg"><br>
-              <p style="font-size: 6rem; color: white;"><a href="https://github.com/EpicThunderZ" target="_blank"><button class="btn btn-primary"><h3>Programs on <img src="node_modules/octicons/build/svg/logo-github.svg"></h3></button></a></p>
-            <center>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-
-    <div class="row bg-info" style="padding: 15px;">
-      <br>
-      <div class="col-sm">
-        <div class="card img-fluid bg-success" style="color: white; width:100%; height:100%;" id="Profile">
-        <center>
-          <img class="card-img rounded" src="/ui/photo.jpg" alt="Card image" style="width:60%; height:60%;">
-        </center>
-          <div class="card-body">
-            <h4 class="card-title">Profile</h4>
-            <p class="card-text">I'm in 7<sup>th</sup> grade. Hi, I'm Janak Shah, an aspiring expert web programmer. I'm in 7<sup>th</sup> grade. Hi, I'm Janak Shah, an aspiring expert web programmer.</p>
-            <a href="https://github.com/EpicThunderZ" target="_blank" class="btn btn-primary">See Github Profile</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm rounded">
-        <div class="row" id="About">
-          <div class="col-sm">
-            <div class="card img-fluid" style="width:100% height:100%">
-              <div class="card-body">
-                <h4 class="card-title">About Me</h4>
-                <p class="card-text">Hi, I'm Janak Shah, an aspiring expert web programmer. I'm in 7<sup>th</sup> grade.</p>
-                <a href="#" target="_blank" class="btn btn-primary">Read More</a>
+    <section class="slider">
+            <div class="flexslider carousel">
+              <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                <ul class="slides" style="width: 2400%; transition-duration: 0.4s; transform: translate3d(-1071px, 0px, 0px);">
+                  <li data-thumb-alt="Coding" style="width: 114px;  display: block;">
+        	    	    <img src="/ui/laptop.jpg" draggable="false">
+        	    		</li>
+        	    		<li data-thumb-alt="Piano" style="width: 114px;  display: block;">
+        	    	    <img src="/ui/piano.jpg" draggable="false">
+        	    		</li>
+        	    		<li data-thumb-alt="Github" style="width: 114px;  display: block;">
+        	    	    <a href="https://github.com/EpicThunderZ" target="_blank"><img src="/ui/github.jpg" draggable="false"></a>
+        	    		</li>
+                  </ul>
               </div>
             </div>
-          </div>
-        </div>
+    </section>
+    <script>
+    (function() {
 
-        <div class = "row"  id="Achievements">
-            <div class="col-sm">
-              <div class="card img-fluid" style="width:100% height:100%">
-                <div class="card-body">
-                  <h4 class="card-title">Achievements</h4>
-                  <p class="card-text">Hi, I'm Janak Shah, an aspiring expert web programmer. I'm in 7<sup>th</sup> grade. </p>
-                  <a href="#" target="_blank" class="btn btn-primary">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+// store the slider in a local variable
+var $window = $(window),
+    flexslider = { vars:{} };
 
-          <div class = "row" id="Programs">
-              <div class="col-sm">
-                <div class="card img-fluid" style="width:100% height:100%">
-                  <div class="card-body">
-                    <h4 class="card-title">My Programs</h4>
-                    <p class="card-text">Hi, I'm Janak Shah, an aspiring expert web programmer. I'm in 7<sup>th</sup> grade.</p>
-                    <a href="#" target="_blank" class="btn btn-primary">See More!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+// tiny helper function to add breakpoints
+function getGridSize() {
+  return (window.innerWidth < 600) ? 2 :
+         (window.innerWidth < 900) ? 3 : 4;
+}
 
-      </div>
+$(function() {
+  SyntaxHighlighter.all();
+});
 
+$window.load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    animationLoop: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    minItems: getGridSize(), // use function to pull in initial value
+    maxItems: getGridSize() // use function to pull in initial value
+  });
+});
 
-    </div>
+// check grid size on resize event
+$window.resize(function() {
+  var gridSize = getGridSize();
+
+  flexslider.vars.minItems = gridSize;
+  flexslider.vars.maxItems = gridSize;
+});
+}());
+    </script>
 
     `
   },
@@ -328,10 +263,20 @@ var titleBar=
   }
 };
 </script>
-<link rel="stylesheet" href="C:/Users/rekhasha/Desktop/Janak_HTML_Programs/Main-Dev/node_modules/primer-css/build/build.css">
-<link rel="stylesheet" href="C:/Users/rekhasha/Desktop/Janak_HTML_Programs/Main-Dev/node_modules/octicons/build/build.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+
+<script src="/ui/flexSlider/flexSlider-2/demo/js/modernizr.js"></script>
+<script>
+$(document).ready(function() {
+$('.flexslider').flexslider({
+animation: "slide"
+});
+});
+</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -343,19 +288,20 @@ var titleBar=
 
     </head>
     <body style="background-color:black;">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" >
+    <nav class="navbar navbar-expand-sm bg-info navbar-light fixed-top" >
       <!-- Brand/logo -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/Home" style="border-right: black solid 5px;">
         <img src="/ui/favicon.ico" class="rounded" alt="logo" style="width:40px; height:40px;">
-        LightninTh5426 - Blog
+        EpicThunderZ - Blog &nbsp &nbsp
       </a>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
       <!-- Links -->
       <div class="collapse navbar-collapse " id="collapsibleNavbar">
+
+      <button type="button" class="btn bg-light btn-outline-info text-info" onclick="window.location.href='/Home'"><img src="node_modules/octicons/build/svg/Home.svg"></img> HOME</button>
       <ul class="navbar-nav" >
 
         <li class="nav-item">
@@ -376,19 +322,27 @@ var titleBar=
 
         <li class="nav-item navbar-right form-inline" >
         <div class="btn-group navbar-btn"id="login_buttons" >
-            <button type="button" onclick="window.location.href='/Login'" class="btn btn-secondary">Login</button>
-            <button type="button" onclick="window.location.href='/Sign-Up'" class="btn btn-secondary">Sign Up</button>
+            <button type="button" onclick="window.location.href='/Login'" class="btn btn-primary">Login</button>
+            <button type="button" onclick="window.location.href='/Sign-Up'" class="btn btn-primary">Sign Up</button>
         </div>
         </li>
       </ul>
     </div>
     </nav>
     <br><br>
-    <div class="container" style="background:white; padding: 0px;  overflow: hidden !important;">
+    <div class="container rounded" style="background:white; padding: 0px;  overflow: hidden !important;">
 
 
 `;
 var body=`
+  <div id="top_whitespace"></div>
+  <script>
+  console.log(window.location.href);
+  if(window.location.href!=="http://localhost:3000/Home") {
+    document.getElementById("top_whitespace").innerHTML="<br><br>";
+  }
+  </script>
+
   <center><h3 id="heading"><u>${heading}</u></h3></center>
 
   <div id="content">
@@ -881,7 +835,12 @@ app.get('/ui/Programs/Math/:fileName', function (req, res) {
 app.get('/node_modules/octicons/build/svg/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'node_modules/octicons/build/svg/', req.params.fileName));
 });
-
+app.get('/ui/flexSlider/flexSlider-2/:fileName', function(req, res) {
+  res.sendFile(path.join(__dirname, 'ui/FlexSlider/FlexSlider-2/',  req.params.fileName));
+});
+app.get('/ui/flexSlider/flexSlider-2/demo/js/modernizr.js', function(req, res) {
+  res.sendFile(path.join(__dirname, 'ui/FlexSlider/FlexSlider-2/demo/js/modernizr.js'));
+});
 app.get('C:/Users/rekhasha/Desktop/Janak_HTML_Programs/Main-Dev/node_modules/primer-css/build/build.css', function (req, res) {
   res.sendFile(path.join('C:/Users/rekhasha/Desktop/Janak_HTML_Programs/Main-Dev/node_modules/primer-css/build/build.css'));
 });
