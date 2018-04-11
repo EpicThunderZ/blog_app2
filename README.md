@@ -1,5 +1,7 @@
 # blog_app2
-## Not ready/Unstable
+## :warning: Not ready/Unstable
+## :warning: Not Secure
+
 ### Introduction
 This is the second version of my blog app.
 
