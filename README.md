@@ -28,7 +28,7 @@ This is the second version of my blog app.
 	- fs
 - config.js file
 
-### How to create config.js file:
+### How to setup config.js file:
 - Create a file named config.js in the project folder
 - Go inside it
 - Put this code in it:
