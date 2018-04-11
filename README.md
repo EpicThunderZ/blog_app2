@@ -32,7 +32,7 @@ This is the second version of my blog app.
 - Create a file named config.js in the project folder
 - Go inside it
 - Put this code in it:
-	```
+	```javascript
 	process.env.DATABASE_PASSWORD='<database_password>';
 	process.env.EMAIL_SERVICE='<email_service(Eg: rediffmail)>';
 	process.env.EMAIL_AUTH_USER='<email_address>';
