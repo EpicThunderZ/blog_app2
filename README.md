@@ -1,5 +1,5 @@
 # blog_app2
-## Bugs
+## :warning: Bugs
 <!-- For check mark emoji->  :white_check_mark: -->
 ### Introduction
 This is the second version of my blog app.
