@@ -1,6 +1,5 @@
 # blog_app2
-## :warning: Not ready/Unstable
-## :warning: Not Secure
+## Bugs
 <!-- For check mark emoji->  :white_check_mark: -->
 ### Introduction
 This is the second version of my blog app.
