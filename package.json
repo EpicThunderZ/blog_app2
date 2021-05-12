@@ -20,7 +20,7 @@
     "http": "0.0.0",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
-    "nodemailer": "^4.4.1",
+    "nodemailer": "^6.4.16",
     "octicons": "^7.1.0",
     "path": "^0.12.7",
     "primer-css": "^9.6.0"
